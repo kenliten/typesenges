@@ -2,10 +2,7 @@ import { Door } from './door';
 
 export function doors(): Door[] {
   const Doors: Door[] = [];
-
-  for (let i = 1; i <= 100; i++) {
-    Doors.push({id: i, open: false});
-  }
+  Doors.fill({id: i, open: false}, 0, 99);
 
   for (let secuence of Doors) {
     for (let door of Doors) {
